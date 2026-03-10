@@ -1,6 +1,14 @@
 #include <stdio.h>
 
-int main(void) {
-   printf("Hello, World!\n");
-   return 0;
+/*
+ 파일: hello.c
+ 역할: 콘솔에 "Hello, World!"를 출력하는 간단한 예제 프로그램
+ 배경지식: C 프로그램의 시작점은 `main` 함수입니다. `printf`는 화면에 문자열을 출력합니다.
+ 초심자 설명: 이 프로그램은 실행되면 한 줄의 인사말을 화면에 보여주고 종료합니다.
+*/
+
+int main(void) // 프로그램의 진입점(시작 함수)
+{
+   printf("Hello, World!\n"); // 문자열을 화면에 출력하고 줄바꿈을 수행
+   return 0; // 0을 반환하면 운영체제에 정상 종료를 알림
 }

@@ -1,15 +1,22 @@
 #include <stdio.h>
 
+/*
+ 파일: triangle.c
+ 역할: 정수형 길이와 높이를 입력받아 삼각형의 넓이를 계산하는 예제
+ 배경지식: 삼각형 넓이 공식은 (밑변 * 높이) / 2 입니다. 여기서는 정수형으로 계산합니다.
+ 초심자 설명: 길이와 높이를 입력하면 계산된 넓이를 정수로 출력합니다(소수점 버림 가능).
+*/
+
 int main(void)
 {
-    int length;
-    int height;
-    int area;
+    int length; // 삼각형의 밑변 길이를 저장할 변수
+    int height; // 삼각형의 높이를 저장할 변수
+    int area; // 계산된 넓이를 저장할 변수
 
-    printf("삼각형의 길이 와 높이를 넣으세요: ");
-    scanf("%d %d", &length, &height);
-    area = length * height / 2;
-    printf("삼각형의 넓이는 %d입니다.\n", area);
- 
-    return 0;
+    printf("삼각형의 길이 와 높이를 넣으세요: "); // 입력 안내
+    scanf("%d %d", &length, &height); // 길이와 높이를 입력받음
+    area = length * height / 2; // 넓이 계산 (정수 연산에 의해 소수점은 버려짐)
+    printf("삼각형의 넓이는 %d입니다.\n", area); // 결과 출력
+
+    return 0; // 정상 종료
 }

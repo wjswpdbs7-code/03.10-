@@ -66,5 +66,5 @@ int main(void)
    printf("숫자는: %d \t is isOdd: %d\n", num, isOdd);
 
    /* 프로그램을 정상적으로 끝냈음을 운영체제에 알리는 값(0)을 반환합니다. */
-   return 0;
+   return 0; 
 }

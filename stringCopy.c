@@ -27,38 +27,39 @@
 #include <stdio.h>   // printf 사용을 위한 헤더
 #include <string.h>  // strcpy 등 문자열 관련 함수를 위한 헤더
 
+/*
+ 파일: stringCopy.c
+ 역할: 문자열 복사와 문자 배열 조작 예제
+ 배경지식: C에서 문자열은 널 문자('\0')로 끝나는 char 배열입니다. strcpy는 널 문자까지 복사합니다.
+ 초심자 설명: 문자열을 복사하고, 직접 문자 인덱스로 값을 채워 문자열을 만드는 과정을 보여줍니다.
+*/
+
 int main(void)
 {
-     // fruit라는 이름의 문자 배열을 20칸 만들고 "strawberry"로 초기화합니다.
-     // 배열에는 마지막에 '\0'이 자동으로 들어가 문자열이 완성됩니다.
-     char fruit[20] = "strawberry"; // fruit = "strawberry"
+    // fruit라는 이름의 문자 배열을 20칸 만들고 "strawberry"로 초기화합니다.
+    // 배열에는 마지막에 '\0'이 자동으로 들어가 문자열이 완성됩니다.
+    char fruit[20] = "strawberry"; // fruit = "strawberry"
 
-     // fruit에 들어있는 문자열을 그대로 출력합니다. -> "딸기 : strawberry"
-     printf("딸기 : %s\n", fruit);
+    printf("딸기 : %s\n", fruit); // fruit에 저장된 문자열을 출력
 
-     // fruit와 문자열 "jam"을 함께 출력합니다. -> "딸기잼: strawberry jam"
-     printf("딸기잼: %s %s\n", fruit, "jam");
+    printf("딸기잼: %s %s\n", fruit, "jam"); // 문자열과 리터럴을 함께 출력
 
-     // fruit에 "banana"를 복사합니다.
-     // strcpy는 널 문자까지 복사하므로 dest 크기를 항상 확인하세요.
-     strcpy(fruit, "banana"); // fruit = "banana"
+    // fruit에 "banana"를 복사합니다. strcpy는 널 문자까지 복사하므로 충분한 크기가 필요
+    strcpy(fruit, "banana"); // fruit = "banana"
+    printf("바나나: %s\n", fruit); // 복사된 결과 출력
 
-     // 복사된 결과를 출력합니다. -> "바나나: banana"
-     printf("바나나: %s\n", fruit);
+    /*
+     다음은 fruit를 수동으로 문자 하나씩 넣어 "apple"로 만드는 과정입니다.
+     보통은 strcpy(fruit, "apple");로 한 줄에 처리합니다.
+    */
+    fruit[0] = 'a'; // 인덱스 0에 'a' 저장
+    fruit[1] = 'p'; // 인덱스 1에 'p' 저장
+    fruit[2] = 'p'; // 인덱스 2에 'p' 저장
+    fruit[3] = 'l'; // 인덱스 3에 'l' 저장
+    fruit[4] = 'e'; // 인덱스 4에 'e' 저장
+    fruit[5] = '\0'; // 문자열 끝을 나타내는 널 문자 저장
 
-     /*
-         다음은 fruit를 수동으로 문자 하나씩 넣어 "apple"로 만드는 과정입니다.
-         보통은 strcpy(fruit, "apple");로 한 줄에 처리합니다.
-     */
-     fruit[0] = 'a'; // 첫 번째 칸에 'a' 저장
-     fruit[1] = 'p'; // 두 번째 칸에 'p' 저장
-     fruit[2] = 'p'; // 세 번째 칸에 'p' 저장
-     fruit[3] = 'l'; // 네 번째 칸에 'l' 저장
-     fruit[4] = 'e'; // 다섯 번째 칸에 'e' 저장
-     fruit[5] = '\0'; // 문자열의 끝을 알리는 널 문자(반드시 필요)
+    printf("사과: %s\n", fruit); // 변경된 fruit 출력 -> "apple"
 
-     // 이제 fruit은 "apple"이 되었으므로 출력하면 사과가 나옵니다.
-     printf("사과: %s\n", fruit);
-
-     return 0; // 프로그램을 정상 종료합니다.
+    return 0; // 정상 종료
 }

@@ -1,13 +1,21 @@
-#include <stdarg.h>
+#include <stdio.h>
 
-int main()
+/*
+ 파일: charNumber.c
+ 역할: 문자형(char) 변수의 값과 해당 아스키(정수) 값을 출력하는 예제
+ 배경지식: C에서 문자는 내부적으로 정수(아스키 코드)로 저장됩니다. `%c`는 문자, `%d`는 정수 출력 포맷입니다.
+ 초심자 설명: 문자 변수가 문자로 보일 때와 그 숫자값(아스키 코드)을 같이 보는 예제입니다.
+*/
+
+int main(void) // 프로그램 시작점
 {
-    char ch1 = 'A'; // 선언과 동시에 대입
-    char ch2 = 64;
-    char ch3;       // 선언만 하고 대입하지 않음
-    printf("ch1 : %c Number: %d\n", ch1, ch2);
-    printf("ch2 : %c Number: %d\n", ch2, ch2); // 초기화되지 않은 변수는 쓰레기값이 출력될 수 있음
-    scanf("%c", &ch3); // 사용자로부터 문자 입력 받기
-    printf("ch3 : %c Number: %d\n", ch3, ch3); // 초기화되지 않은 변수는 쓰레기값이 출력될 수 있음
-    return 0;
+    char ch1 = 'A'; // ch1을 선언하고 문자 'A'로 초기화 (아스키 코드 65)
+    char ch2 = 64;  // ch2를 선언하고 정수 리터럴 64를 저장(아스키 문자 '@')
+    char ch3;       // ch3만 선언 (초기화하지 않았으므로 읽기 전에는 값이 불확실함)
+
+    printf("ch1 : %c Number: %d\n", ch1, ch2); // ch1을 문자로, ch2를 정수로 출력
+    printf("ch2 : %c Number: %d\n", ch2, ch2); // ch2를 문자와 정수로 출력
+    scanf("%c", &ch3); // 사용자로부터 하나의 문자를 읽어 ch3에 저장 (주소 전달 필요)
+    printf("ch3 : %c Number: %d\n", ch3, ch3); // 입력된 문자와 해당 아스키 값을 출력
+    return 0; // 정상 종료
 }

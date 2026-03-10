@@ -1,11 +1,19 @@
 #include <stdio.h>
 
+/*
+ 파일: compare2.c
+ 역할: 입력한 정수가 1 이상 9 이하 범위에 속하는지 판별하여 true/false로 출력
+ 배경지식: 논리 연산자 &&(그리고)와 삼항 연산자(?:)의 사용법을 연습합니다.
+ 초심자 설명: 숫자를 하나 입력하면 그 숫자가 1~9 사이인지 아닌지를 문자열로 보여줍니다.
+*/
+
 int main(void)
 {
-    int num;
-    printf("숫자를 입력하세요 1~9 : ");
-    scanf("%d", &num);
-    
+    int num; // 사용자 입력을 저장할 변수 선언
+    printf("숫자를 입력하세요 1~9 : "); // 입력 안내 메시지
+    scanf("%d", &num); // 정수 입력 받기
+
+    // (num >= 1) && (num <= 9) 조건이 참이면 "true", 아니면 "false"를 출력
     printf("1 <= %d <= 9 : %s\n", num, (num >= 1) && (num <= 9) ? "true" : "false");
-    return 0;
+    return 0; // 정상 종료
 }
