@@ -15,7 +15,8 @@ int main(void)
 
     printf("삼각형의 길이 와 높이를 넣으세요: "); // 입력 안내
     scanf("%d %d", &length, &height); // 길이와 높이를 입력받음
-    area = length * height / 2; // 넓이 계산 (정수 연산에 의해 소수점은 버려짐)
+    area = length * height / 2; // 넓이 계산 (정수 연산에 의해 소수점은 버려짐) 코딩에서 계산식을 작성할 때는 수학에서 사용하는 공식과 동일하게 작성하면 됩니다.
+
     printf("삼각형의 넓이는 %d입니다.\n", area); // 결과 출력
 
     return 0; // 정상 종료
