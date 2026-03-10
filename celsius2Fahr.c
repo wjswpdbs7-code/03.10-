@@ -5,7 +5,7 @@ int main()
     int celsius; // 섭씨 온도를 저장할 변수 선언
     printf("섭씨 온도를 입력하세요: "); // 사용자에게 입력 안내 메시지 출력
     scanf("%d", &celsius); // 사용자로부터 정수 입력을 받아 c
-    double fahr;
+    double fahr; //double이란 실수형 데이터를 저장할 수 있는 데이터 타입입니다. 실수란 소수점이 있는 숫자를 말합니다. 예를 들어, 3.14, -0.001, 2.71828 등이 실수입니다. fahr는 화씨 온도를 저장할 변수로 선언되어 있습니다.
     fahr = 9.0 / 5.0 * (double)celsius + 32.0; // 섭씨를 화씨로 변환하는 공식
     printf("C(celsius) 온도: %.2d\n", celsius); // 섭씨 온도를 소수점 둘째 자리까지 출력
     printf("F(fhar) 온도: %.2f\n", fahr); // 화씨 온도를 소수점 둘째 자리까지 출력
