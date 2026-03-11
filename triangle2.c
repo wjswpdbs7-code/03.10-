@@ -14,7 +14,7 @@ int main(void)
     double area; // 계산된 넓이 저장(실수)
 
     printf("삼각형의 길이 와 높이를 넣으세요: "); // 입력 안내
-    scanf("%lf %lf", &length, &height); // 실수형 입력은 %lf를 사용
+    scanf("%lf %lf", &length, &height); // 실수형 입력은 %lf를 사용 &는 변수의 주소를 전달 없으면 입력값이 변수에 저장되지 않음
     area = length * height / 2; // 넓이를 실수로 계산
     printf("삼각형의 넓이는 %.2lf입니다.\n", area); // 소수점 둘째 자리까지 출력
 
